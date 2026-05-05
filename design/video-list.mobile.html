@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,wght@1,400;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fcf9f8",
+                    "bg-subtle": "#F4F1EB",
+                    "on-primary-fixed": "#3b0900",
+                    "tertiary": "#825100",
+                    "slate": "#4A4A48",
+                    "primary-fixed": "#ffdbd1",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-secondary-container": "#5a6a3d",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-error-container": "#93000a",
+                    "line": "#E8E4DC",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#80290f",
+                    "secondary-fixed-dim": "#bbcd98",
+                    "on-surface-variant": "#56423d",
+                    "terra": "#C75D3F",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed": "#131f00",
+                    "inverse-primary": "#ffb5a0",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "secondary-fixed": "#d7eab2",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#bd5538",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#ddc0b9",
+                    "secondary-container": "#d7eab2",
+                    "on-surface": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "paper": "#FFFFFF",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-low": "#f6f3f2",
+                    "mute": "#8A8782",
+                    "outline": "#8a726c",
+                    "border-strong": "#C9C4B9",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "surface-tint": "#a04025",
+                    "tertiary-container": "#a2680b",
+                    "on-background": "#1c1b1b",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#9d3e22",
+                    "surface-container-highest": "#e5e2e1",
+                    "saffron": "#D9963C",
+                    "ink": "#141414",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0edec",
+                    "danger": "#C44545",
+                    "secondary": "#546438",
+                    "terra-hover": "#B14F33",
+                    "sage": "#7A8B5B",
+                    "sage-soft": "#E5EAD9",
+                    "terra-soft": "#F2D9CE",
+                    "on-primary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "cream": "#FAF7F2",
+                    "on-secondary-fixed-variant": "#3d4c22",
+                    "on-tertiary-container": "#fffbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "3xl": "6rem",
+                    "md": "1.5rem",
+                    "3xs": "0.25rem",
+                    "2xl": "4rem",
+                    "xs": "0.75rem",
+                    "sm": "1rem",
+                    "lg": "2rem",
+                    "2xs": "0.5rem",
+                    "xl": "3rem"
+            },
+            "fontFamily": {
+                    "h2": ["Fraunces"],
+                    "h1": ["Fraunces"],
+                    "mono": ["JetBrains Mono"],
+                    "display": ["Fraunces"],
+                    "body-large": ["Inter"],
+                    "body": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["clamp(1.5rem, 3vw, 2rem)", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "h1": ["clamp(1.75rem, 4vw, 2.75rem)", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "mono": ["0.9375rem", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display": ["clamp(2.5rem, 5vw, 4rem)", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-large": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body": ["1.0625rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-cream font-body text-ink min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#FAF7F2] dark:bg-stone-950 flex items-center justify-between px-6 py-4 w-full docked full-width top-0 z-50 sticky border-b border-[#E8E4DC] dark:border-stone-800">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform hover:bg-[#E8E4DC]/30 dark:hover:bg-stone-900 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[#C75D3F] dark:text-[#D97E63]" data-icon="menu">menu</span>
+</button>
+<h1 class="font-serif italic text-2xl text-[#C75D3F] dark:text-[#D97E63] tracking-tight">Món Ngon Mỗi Ngày</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="active:scale-95 transition-transform hover:bg-[#E8E4DC]/30 dark:hover:bg-stone-900 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[#C75D3F] dark:text-[#D97E63]" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-screen-md mx-auto px-6 pt-lg">
+<!-- Hero Section -->
+<section class="mb-xl">
+<nav class="flex items-center gap-2 text-mute text-sm mb-xs">
+<span class="font-medium">Video</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-terra font-semibold">Bún Chả Hà Nội</span>
+</nav>
+<h2 class="font-h1 text-h1 text-ink mb-2">Video Cảm Hứng</h2>
+<p class="text-mute text-body-large max-w-xl">Tham khảo các cách chế biến độc đáo từ cộng đồng sáng tạo nội dung.</p>
+</section>
+<!-- Video Featured (Bento Layout Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-xl">
+<!-- Large Hero Video Card -->
+<div class="md:col-span-12 group">
+<div class="relative overflow-hidden rounded-xl border border-line bg-paper shadow-sm aspect-video mb-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, close-up overhead shot of a traditional Vietnamese Bún Chả set in a rustic Hanoi cafe. The frame shows succulent grilled pork patties and pork belly soaking in a warm amber dipping sauce with pickled papaya slices. Fresh green herbs, thin white rice noodles, and chopped red chilies create a vibrant color contrast against the neutral, warm cream background. The lighting is soft and golden, highlighting the steam rising from the pork and the glossy texture of the sauce, reflecting an authentic artisanal culinary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL7RSKit4s0OdIbj65dSeAUHAtkOqrekZ_ouJOUR6Zh_tkMLoQaFGBlqK_d6-Pbyf4C-jHlZHt3tF_2K1xFzF7jamItqqMRIvfozrB107EPVt2r7rBCPPiRsL4AL6s1ikv0ZXbvUUbh7JmWBK3LQG1xtuvBaCO1A541i-hNBQd04faMWR5UMMHNzbIIou8H55PA-n6zbTZPs5dY5gJQ8Or7-AyRc3RtJf5RVXcjf_xCPwM-Dfi8qFD71ZgouGofgmJJewXoNo0ZPU6"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center transition-opacity group-hover:bg-black/30">
+<button class="w-16 h-16 bg-terra text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform group-hover:bg-terra-hover">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</button>
+</div>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-sm" data-icon="video_library">video_library</span>
+<span class="text-white text-xs font-bold font-mono tracking-widest">12:45</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-block px-2 py-0.5 bg-terra-soft text-terra text-[10px] font-bold uppercase tracking-widest rounded-sm">Featured</span>
+<div class="flex items-center gap-1 text-mute">
+<span class="material-symbols-outlined text-sm" data-icon="smart_display">smart_display</span>
+<span class="text-xs uppercase font-bold tracking-tighter">YouTube</span>
+</div>
+</div>
+<h3 class="font-h2 text-h2 mb-1 group-hover:text-terra transition-colors">Bún Chả Hà Nội chuẩn vị phố cổ: Bí quyết ướp thịt gia truyền</h3>
+<div class="flex items-center gap-4 text-mute">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-line overflow-hidden border border-line">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a friendly Vietnamese chef wearing a clean white culinary jacket. The setting is a bright, modern professional kitchen with warm backlighting. The chef has a welcoming smile, representing high-end culinary expertise and reliable recipe instruction. The visual style is crisp and editorial, focusing on personability and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwHdJXUiiQSnpuMOWLDtExINBlbrKNrurKSVXbi4UvGUYhiSsQoAlt2r1--bOjO7_Wpn6OH7VkXICOGdOknKAS0J1Dvld4A1ZLo4jehvS_uKfCQTa-vsDVQACkt199s9KT06OkZigGi3DJLdNZ-pr96glWwNYIikqUp02VS6oRvJYVe_pjQh35fJTrO72YDR56QSPjxPFdxhqhwMydcTks4FqvEHTvCKhKgXn-M5k51_DvOSxAPXz_SFltTP3WHEXb1HB1jYsl8kZB"/>
+</div>
+<span class="text-sm font-medium text-ink">Chef Hùng</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="visibility">visibility</span>
+<span class="text-xs">1.2M views</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="favorite">favorite</span>
+<span class="text-xs">45K likes</span>
+</div>
+</div>
+</div>
+<button class="mt-2 px-6 py-2 bg-terra text-white font-medium rounded-lg text-sm active:scale-95 transition-transform hover:bg-terra-hover">Watch Now</button>
+</div>
+</div>
+<!-- Grid Content -->
+<div class="md:col-span-6 group">
+<div class="relative overflow-hidden rounded-xl border border-line bg-paper aspect-video mb-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic, vertical-format culinary video frame showing a chef's hands skillfully tossing rice noodles with fresh mint and cilantro for a Bun Cha dish. The background is a minimalist concrete kitchen counter, with soft natural light coming from the side creating gentle shadows. The focus is sharp on the texture of the white noodles and the vibrant green of the herbs. The style is clean, modern, and high-end editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD22LqvieCVLSEPW9XvGA7fzrBS0fUiEOdtzcQI4PDDd0l2ZfL1eBqUpiGSECytDFGEa0v4YIVC_O9RmbKR-zIk2t-E82SmLHoloksq3zlUZ2RSBeqvB5KNpbz-5piyV_eW5W7iOVqfsZkEWH5KyD_8jWPzHWwLDac1ZDSYPUfHcIQWMNaBRH2U6MoT6_aU-ToXVTyu4hLyoKeYS39h2CZW1YT7knQb6jn_MgZRvZhEf-s2LH_QrHZJFHIscp6NY7-IMc5VpjojZvl0"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-terra shadow-md">
+<span class="material-symbols-outlined" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-xs text-[#ff0050]" data-icon="music_note">music_note</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-mute">TikTok</span>
+</div>
+<h4 class="font-serif font-semibold text-lg line-clamp-2 leading-snug mb-1 group-hover:text-terra transition-colors">Cách làm bún chả nhanh gọn cho người bận rộn</h4>
+<div class="flex items-center gap-3 text-mute">
+<span class="text-xs font-medium text-ink">Bếp Nhà</span>
+<span class="text-xs">• 320K views</span>
+</div>
+</div>
+<div class="md:col-span-6 group">
+<div class="relative overflow-hidden rounded-xl border border-line bg-paper aspect-video mb-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully plated Bún Chả arrangement on a dark ceramic platter, captured in a moody, low-light setting inspired by fine dining photography. The focus is on the smoky, charred edges of the grilled pork patties, accompanied by delicate curls of rice noodles and vibrant red chili slices in a bowl of dipping sauce. The atmosphere is sophisticated and quiet, utilizing deep shadows and focused warm highlights to create a premium culinary experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiMI0rQ7ZVG9oBf1nbUzJaX4UgpJoLCGOdARpSMuWwwtKD1qsHkLZNkjSAzaGRsKEs2BE6nXL6K7qEIw-J2-X4h7khUYhJ5UsPcEeGlSnXWCGQLC6ZxtkXG1DStZIv2nRj-bjDipQyw_2dw0wWKr27ets6zljYLksuTgy_Owdqzb0_DZ_Dhr9ngz3Dw_MZhTPZfPGJ0KXjQlCmvoYlEFu-YpvM08I75xV0ii-ujPDpJPWD1Rv3NgpVbOIevKQ0gcwOun2GGO-PwcLS"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-terra shadow-md">
+<span class="material-symbols-outlined" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-xs text-[#ff0000]" data-icon="smart_display">smart_display</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-mute">YouTube</span>
+</div>
+<h4 class="font-serif font-semibold text-lg line-clamp-2 leading-snug mb-1 group-hover:text-terra transition-colors">Vlog: Tìm kiếm quán Bún Chả ngon nhất Hà Nội</h4>
+<div class="flex items-center gap-3 text-mute">
+<span class="text-xs font-medium text-ink">Hà Nội Foodie</span>
+<span class="text-xs">• 890K views</span>
+</div>
+</div>
+</div>
+<!-- Community Section -->
+<section class="border-t border-line pt-lg mb-2xl">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h2 text-h2">Khám phá thêm</h3>
+<button class="text-terra text-sm font-semibold flex items-center gap-1">
+                    Xem tất cả <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Horizontal Scroll Area -->
+<div class="flex gap-4 overflow-x-auto pb-6 -mx-6 px-6 no-scrollbar">
+<!-- Small Card -->
+<div class="min-w-[200px] group cursor-pointer">
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A macro shot of fresh herbs: coriander, mint, and perilla leaves, glistening with water droplets in a bamboo basket. The lighting is natural and bright, emphasizing the fresh green tones and delicate textures of the leaves. This image captures the essence of fresh Vietnamese ingredients in a high-end, organic lifestyle aesthetic with a clean cream backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBasg30WlZZPVfMlD8Fx1FHVH1uL6Rz-e9Rn9zFjS57i1q6Uq_jwF1T88EqAEHOUwb6QJ8N2ama1NepXeJ0lj7DxLPIz2Zqs4zXd8Zs2X_ZoaR1wAOvDIQDeWUKI9fqXxwN4iihd6PGKR5ZLAJqOZcB-p1mtc96xdQKTnHa5bNFbRJYTPDLRpdiRkfoEug4KXStF_VMmxtNfUYlWc5LMz1-mKuao0K3TA19VCmljhkMjdPFySL0G8uK89LozrsR-qKOM8m3-p-pkZjQ"/>
+<div class="absolute bottom-2 left-2 right-2 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+<p class="text-xs font-bold text-terra uppercase mb-1">Mẹo hay</p>
+<p class="text-sm font-medium leading-tight">Cách làm nước chấm siêu đỉnh</p>
+</div>
+</div>
+</div>
+<div class="min-w-[200px] group cursor-pointer">
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A top-down view of a sizzling charcoal grill where pork patties and thin slices of belly are being expertly grilled. Smoke billows softly around the meat, and orange embers glow beneath the metal grate. The lighting is warm and evocative, capturing the intense texture of the charred meat and the traditional cooking process in a rustic, high-quality photograph." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM-Wz6aKgwA77KTQMYrIs_5gFlF6VlSyYmPN7n8ayD_WWSD2cyUE-u4errYlt5ye-aG1_Nh-kpSCrO4UUYSW6BfuMc7NNWUhJefVM4P6D-NoafFuXMwEWfAB6EBJHi3y__bXD7Yd5zW6RJiAp9P0aSUjkZaDNsUru83_XMDOwmbB7jc0Y525Bq5dNlAbzY2sl_ix2tZsnrb89GPyjWoJ6k23nQqZ49Ymov1g2v0ZchypTE2vq7py2Gb6LJs0J9f2-xlhaq31Sl9G0Y"/>
+<div class="absolute bottom-2 left-2 right-2 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+<p class="text-xs font-bold text-terra uppercase mb-1">Kỹ thuật</p>
+<p class="text-sm font-medium leading-tight">Nướng thịt bằng than hoa</p>
+</div>
+</div>
+</div>
+<div class="min-w-[200px] group cursor-pointer">
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A beautifully prepared tray of rice vermicelli (bun) noodles neatly arranged in small, circular bundles on a banana leaf. The textures of the noodles are pristine white and delicate, contrasting against the deep green of the leaf. The shot is minimalist and clean, representing the high-quality, fresh components of a Vietnamese meal in a modern, light-filled studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnulkEBV0_jpUXAP_HXfXZyJt1OrRpgwMPAmcGpVj-Zx8F-ZaVPNi8ucCsVBrUldFfVtSjhCGNHywscX-hEQomUMBSseLXdoLjrbf7o5LWnPv8HCzKhU1fZKCOs73CqhQxAXvIBHlrvNllQjhrdsxDXmqaONXAtG51ZlDKIpWcZOurU0LYThde06t8ch88lmi-7R_cLsFHmbPOltXAmcXvyEluX0k9zl_u-QYLb8xOiz7vfKPciKSD2PyJYF5RikxTZG73Gf09BGI"/>
+<div class="absolute bottom-2 left-2 right-2 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+<p class="text-xs font-bold text-terra uppercase mb-1">Bí quyết</p>
+<p class="text-sm font-medium leading-tight">Chọn bún tươi chuẩn ngon</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-t border-[#E8E4DC] dark:border-stone-800 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-around items-center pt-3 pb-safe-offset-2 px-4">
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-sans text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#C75D3F] dark:text-[#D97E63] bg-[#C75D3F]/5 rounded-full px-4 py-1 active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="explore" data-weight="fill">explore</span>
+<span class="font-sans text-[11px] font-medium tracking-wide uppercase mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-sans text-[11px] font-medium tracking-wide uppercase mt-1">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[11px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</div>
+</nav>
+<!-- Contextual FAB (Hidden on this scroll-heavy list page per rules, but shown here for UI completeness if intended) -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-terra text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform hover:bg-terra-hover z-40">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</button>
+</body></html>

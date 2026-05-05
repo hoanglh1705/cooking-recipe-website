@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed-variant": "#653e00",
+                "on-primary-fixed": "#3b0900",
+                "on-tertiary-fixed": "#2a1700",
+                "surface-tint": "#a04025",
+                "surface-dim": "#dcd9d9",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e5e2e1",
+                "secondary-container": "#d7eab2",
+                "secondary-fixed-dim": "#bbcd98",
+                "inverse-primary": "#ffb5a0",
+                "tertiary-fixed-dim": "#ffb95f",
+                "on-background": "#1c1b1b",
+                "inverse-surface": "#313030",
+                "on-error": "#ffffff",
+                "saffron": "#D9963C",
+                "on-primary-container": "#fffbff",
+                "on-tertiary": "#ffffff",
+                "mute": "#8A8782",
+                "tertiary-fixed": "#ffddb8",
+                "tertiary-container": "#a2680b",
+                "sage": "#7A8B5B",
+                "error": "#ba1a1a",
+                "primary-container": "#bd5538",
+                "surface-container-high": "#ebe7e7",
+                "cream": "#FAF7F2",
+                "ink": "#141414",
+                "danger": "#C44545",
+                "sage-soft": "#E5EAD9",
+                "outline-variant": "#ddc0b9",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#d7eab2",
+                "outline": "#8a726c",
+                "on-secondary-container": "#5a6a3d",
+                "line": "#E8E4DC",
+                "surface-bright": "#fcf9f8",
+                "terra": "#C75D3F",
+                "secondary": "#546438",
+                "tertiary": "#825100",
+                "terra-hover": "#B14F33",
+                "primary-fixed": "#ffdbd1",
+                "primary": "#9d3e22",
+                "on-tertiary-container": "#fffbff",
+                "on-secondary-fixed": "#131f00",
+                "primary-fixed-dim": "#ffb5a0",
+                "on-surface": "#1c1b1b",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#3d4c22",
+                "border-strong": "#C9C4B9",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "terra-soft": "#F2D9CE",
+                "slate": "#4A4A48",
+                "bg-subtle": "#F4F1EB",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-fixed-variant": "#80290f",
+                "on-surface-variant": "#56423d",
+                "surface": "#fcf9f8",
+                "surface-container": "#f0edec",
+                "paper": "#FFFFFF",
+                "surface-container-highest": "#e5e2e1",
+                "surface-container-lowest": "#ffffff",
+                "background": "#fcf9f8"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "xl": "3rem",
+                "xs": "0.75rem",
+                "lg": "2rem",
+                "3xs": "0.25rem",
+                "md": "1.5rem",
+                "2xl": "4rem",
+                "sm": "1rem",
+                "2xs": "0.5rem",
+                "3xl": "6rem"
+            },
+            "fontFamily": {
+                "h2": ["Fraunces"],
+                "mono": ["JetBrains Mono"],
+                "body-large": ["Inter"],
+                "display": ["Fraunces"],
+                "body": ["Inter"],
+                "h1": ["Fraunces"]
+            },
+            "fontSize": {
+                "h2": ["clamp(1.5rem, 3vw, 2rem)", {"lineHeight": "1.3", "fontWeight": "500"}],
+                "mono": ["0.9375rem", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "body-large": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display": ["clamp(2.5rem, 5vw, 4rem)", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "body": ["1.0625rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "h1": ["clamp(1.75rem, 4vw, 2.75rem)", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-cream font-body text-ink antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#FAF7F2] dark:bg-stone-950 text-[#C75D3F] dark:text-[#D97E63] font-serif italic text-2xl Newsreader for display, font-sans Inter for interface docked full-width top-0 z-50 sticky border-b border-[#E8E4DC] dark:border-stone-800 flat no-shadows flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#E8E4DC]/30 dark:hover:bg-stone-900 transition-all duration-300 active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-2xl font-serif italic text-[#C75D3F] dark:text-[#D97E63] tracking-tight">Món Ngon Mỗi Ngày</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-[#E8E4DC]/30 dark:hover:bg-stone-900 transition-all duration-300 active:scale-95 transition-transform p-2">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="px-6 py-xl md:py-3xl flex flex-col items-center text-center max-w-4xl mx-auto">
+<span class="font-mono text-terra uppercase tracking-widest text-xs mb-sm">Nền tảng ẩm thực Việt</span>
+<h2 class="font-h1 text-h1 mb-md italic">Công thức thật, từ video thật</h2>
+<div class="w-full max-w-2xl mt-md relative">
+<input class="w-full py-4 px-6 bg-paper border border-line rounded-lg shadow-sm focus:ring-1 focus:ring-terra focus:border-terra outline-none transition-all font-body text-body" placeholder="Bạn muốn nấu món gì hôm nay?" type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 bg-terra text-white p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+<p class="mt-sm text-mute font-body text-sm italic">
+                Đang có <span class="text-ink font-bold">184 món</span> · cập nhật mỗi ngày
+            </p>
+</section>
+<!-- Categories (Danh Mục) -->
+<section class="mb-xl overflow-hidden">
+<div class="flex gap-md overflow-x-auto hide-scrollbar px-6 pb-2">
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="sunny">sunny</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Bữa sáng</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="rice_bowl">rice_bowl</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Cơm</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="soup_kitchen">soup_kitchen</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Canh</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="outdoor_grill">outdoor_grill</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Nướng</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="eco">eco</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Chay</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-fit group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-paper border border-line flex items-center justify-center group-hover:bg-terra-soft transition-colors">
+<span class="material-symbols-outlined text-terra" data-icon="cake">cake</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-wide">Tráng miệng</span>
+</div>
+</div>
+</section>
+<!-- Món Mới Nhất -->
+<section class="px-6 mb-xl">
+<div class="flex justify-between items-baseline mb-md">
+<h3 class="font-h2 text-h2 italic">Món Mới Nhất</h3>
+<a class="text-terra text-sm font-semibold hover:underline" href="#">Xem tất cả</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<article class="bg-paper border border-line overflow-hidden rounded-sm group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic close-up shot of traditional Pho Bo Nam Bo with vibrant green herbs, golden fried onions, and tender beef slices arranged over white rice noodles. The lighting is soft and natural, emphasizing the rich textures and colors of the Vietnamese cuisine. The composition is clean and minimalist, set against a subtle cream background that reflects a high-end lifestyle journal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv8KJ3FDua5A0rbY1DNOc6Vske4HMgEwWBHBsPKc4G63xopGfKbQmqWK0S3jSw2gdTnLWhPgmQ4Yv327gOVzESMm2dlDONr8F7wl6D3MEAe1qpjKI84NPCoz9XlS4IZNZ05tbZeKeJP8JRcL9vIjZ-BctXDuFhHQ-ovgUJC5sOLnO_NSpugSNyw-PVMwqgEqszaStYAzD-wvstdEtvLkswsbGBGT_9tc1u4sFl-RC75iljG4FAWlQ_5JFdcvj5kP9eWaSER7FmTYdn"/>
+</div>
+<div class="p-md">
+<div class="flex gap-2 mb-2">
+<span class="bg-sage-soft text-secondary text-[10px] px-2 py-0.5 font-bold rounded-full uppercase">#mon-viet</span>
+<span class="bg-terra-soft text-terra text-[10px] px-2 py-0.5 font-bold rounded-full uppercase">#healthy</span>
+</div>
+<h4 class="font-h2 text-xl mb-2">Phở Bò Nam Bộ</h4>
+<p class="text-mute text-sm line-clamp-2 mb-4 font-body">Món trộn thanh mát với nước mắm chua ngọt, thịt bò xào sả thơm lừng và các loại rau sống tươi ngon.</p>
+<div class="flex items-center justify-between text-xs text-mute pt-4 border-t border-line">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                30 phút
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                                2 người
+                            </div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-paper border border-line overflow-hidden rounded-sm group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An editorial-style food photograph of Ga Kho Sa Ot, a spicy ginger and lemongrass chicken claypot dish. The chicken is caramelized to a rich mahogany color, garnished with bright red chili and fresh green scallions. The setting is a minimalist wooden table with soft side-lighting that highlights the steam rising from the bowl, creating a warm, artisanal mood consistent with high-end culinary magazines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe5mBckXVNJ9ioj-5YRjf0Z54u8s4IZshGbIoNseMXrbGYkiDr4le3Y41IdzbVak4baETPsbqaBPVrH0hiRgfi3kgTv73BAYFoT0NYjOnAKVrnOTWyuKsBAzYzGp9_9mnvRFnjd8wC10ksAdS2JlOnLOsVIocAYKNWnhZBkSq6aWfJIDlfqo-a7X3tDMShnuC2B6fjwz9haNR_FY2_ItfcY5QAPhdcjrtkw0z3BYPUDjJfOh014g2bCjSCZdn1F47UKtboHNdR9I6h"/>
+</div>
+<div class="p-md">
+<div class="flex gap-2 mb-2">
+<span class="bg-sage-soft text-secondary text-[10px] px-2 py-0.5 font-bold rounded-full uppercase">#com-nha</span>
+</div>
+<h4 class="font-h2 text-xl mb-2">Gà Kho Sả Ớt</h4>
+<p class="text-mute text-sm line-clamp-2 mb-4 font-body">Thịt gà dai ngọt thấm vị cay nồng của ớt và hương thơm đặc trưng của sả, cực kỳ đưa cơm.</p>
+<div class="flex items-center justify-between text-xs text-mute pt-4 border-t border-line">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                45 phút
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                                4 người
+                            </div>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-paper border border-line overflow-hidden rounded-sm group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional top-down culinary shot of Ca Kho To, Vietnamese braised fish in a traditional clay pot. The fish is glistening with a dark caramel glaze and topped with black pepper and green onions. The shot is meticulously composed with plenty of negative space on a stone surface, utilizing a refined color palette of deep browns, forest greens, and soft creams to evoke a sense of quiet excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiebSP-KrdybNUDxpcNaohIOOFBgFNTLAapc0nJ9V4Hej290WjCej29Jlcn5LmcXW76utCdQRO_dgfb-J_olg2xFji4d1PThGp_g8qgbQTzS2Ijb-97HqszNwMPmv37xzQCDfGE_uVF6w4FnhxP-AlrTE1GPR5lFjtq7loLhtufPJ8Lf3ZudG3FdkmU1Yit4-OG4bhYZbgJ9ySD0McUgpO9dTD_MUB0fdcdgiRvw7ve7I069o_CnszorYCZWeLcJmrJZn2ypG18pE2"/>
+</div>
+<div class="p-md">
+<div class="flex gap-2 mb-2">
+<span class="bg-sage-soft text-secondary text-[10px] px-2 py-0.5 font-bold rounded-full uppercase">#truyen-thong</span>
+</div>
+<h4 class="font-h2 text-xl mb-2">Cá Kho Tộ</h4>
+<p class="text-mute text-sm line-clamp-2 mb-4 font-body">Cá được kho trong tộ đất giúp giữ nhiệt, nước kho kẹo lại màu cánh gián, vị mặn ngọt đậm đà.</p>
+<div class="flex items-center justify-between text-xs text-mute pt-4 border-t border-line">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                60 phút
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                                3 người
+                            </div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Món Hot Tuần Này -->
+<section class="bg-paper py-xl">
+<div class="px-6 flex justify-between items-baseline mb-md">
+<h3 class="font-h2 text-h2 italic">Món Hot Tuần Này</h3>
+</div>
+<div class="flex gap-md overflow-x-auto hide-scrollbar px-6">
+<div class="min-w-[280px] md:min-w-[400px] relative overflow-hidden rounded-xl aspect-video group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A high-key, bright food photography shot of a vibrant Mediterranean salad bowl. The fresh greens, purple radishes, and yellow peppers are illuminated by crisp morning sunlight, creating sharp, elegant shadows. The style is modern minimalist with a sophisticated focus on freshness and organic ingredients, set in a bright, clean kitchen environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3zJ7c-l25_1-0lKn015exZR_fjRfXi2Ltian3jnm0w5I9b5m0bcJSaKlXYJhMq0re02km3nB9nmSgtr_QmE78qygmHfz4-lYegNEjs5wFBja3No2LtcIAJyVYJ73A-0pNt_No55ADX5N-oNyeXha5mpqJdg36uoEenhSBOV_pE74xksO8Ny17ongUTZaFe_ZREzD49L75cP1g4tTeX85cXmSxxiRY1-koJOHQZgkVmK_dZdxQKsAHDsD7fNR8GZZ5PLpE2S9Ffa2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-1">Xu hướng</span>
+<h4 class="text-white text-xl font-h2 italic">Salad Thập Cẩm Sốt Chanh Dây</h4>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[400px] relative overflow-hidden rounded-xl aspect-video group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An artistic, dark-themed food photo of a steaming bowl of spicy ramen. The rich red broth is topped with a perfectly soft-boiled egg, bright green scallions, and dark nori. High-contrast lighting captures the individual droplets of steam and oil on the surface, creating an intense and appetizing visual mood for a high-end culinary journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6P58hM7AY0Pa1oP4SfTsfN79BZI6rtnenp3ZM5B-bxJFyzfZz8fo-6yueR1A2IJ0yV1hmAgMmtpnSjFHIRWXSDg7bt80PLU-J7T5Ccw78WBuuUpYCZF2rvrXhmO0Q-spbReHNdCnR3hA6SLovUlZ917dkJ4pu-rZNpAuTUTa7LG9pF1AOsY0VWo_mcYtqNVBXpXm4cxSgt7Pj9H1TAaD0rF84TKmPE1R-fmWwz3emXAQYPzkDqmRnguSyVEJ9uSRq6fz5b13K1UdB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-1">Yêu thích</span>
+<h4 class="text-white text-xl font-h2 italic">Bún Bò Huế Cay Nồng</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Về Chúng Tôi -->
+<section class="px-6 py-2xl max-w-4xl mx-auto text-center">
+<div class="mb-sm flex justify-center">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-terra">
+<img class="w-full h-full object-cover" data-alt="A warm, professional portrait of a smiling chef in a clean white apron, set in a blurred, bright kitchen studio. The lighting is soft and flattering, emphasizing a friendly and trustworthy persona. The image follows a modern, bright light-mode aesthetic with natural colors, suitable for an editorial 'About Us' section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNNpGWcyqtzFHHE8j_zpIiPUiOFTLYNY5D647Xkjlj5kRKWMZGRkXcpa4e44NHBo-Y19ppvbhOJZTRcIZl6oboYIuVCnsMRFnEU5s6lTuQU-mk_khvw9ZLKYD6RZ8F6gMJSG8j9yPtO9w4OfOGTSwB20wAhEE5BCkWoqi9BaZE56gAvuMF7u4akXJqEq5698bvpRFkxkv4F3ZPlBU6Uju7-S9Hfm2yXHv8FM0sSxM192IYAK41IO6DeJq1-kYNnumQUmUh2oXcn_oC"/>
+</div>
+</div>
+<h3 class="font-h2 text-2xl mb-sm italic">"Nấu ăn là nghệ thuật sẻ chia"</h3>
+<p class="text-mute font-body italic max-w-2xl mx-auto">
+                Món Ngon Mỗi Ngày ra đời với mong muốn mang lại niềm cảm hứng vào bếp cho mọi gia đình Việt. Chúng tôi tin rằng mỗi món ăn đều chứa đựng một câu chuyện và sự chân thành từ người nấu.
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-paper border-t border-line px-6 py-xl pb-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl">
+<div class="md:col-span-2">
+<h4 class="font-serif italic text-2xl text-terra mb-md">món ngon mỗi ngày .</h4>
+<p class="text-mute text-sm max-w-xs">Thư viện công thức nấu ăn được tuyển chọn, hướng dẫn chi tiết qua video và hình ảnh chân thực nhất.</p>
+</div>
+<div>
+<h5 class="font-bold text-xs uppercase tracking-widest mb-md">Liên kết</h5>
+<ul class="space-y-sm text-sm text-mute">
+<li><a class="hover:text-terra transition-colors" href="#">Về chúng tôi</a></li>
+<li><a class="hover:text-terra transition-colors" href="#">Công thức mới</a></li>
+<li><a class="hover:text-terra transition-colors" href="#">Chính sách bảo mật</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-xs uppercase tracking-widest mb-md">Kết nối</h5>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-line flex items-center justify-center text-mute hover:text-terra hover:border-terra transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-8 h-8 rounded-full border border-line flex items-center justify-center text-mute hover:text-terra hover:border-terra transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-md border-t border-line text-center">
+<p class="text-[10px] text-mute uppercase tracking-widest">© 2024 Món Ngon Mỗi Ngày - Bản quyền thuộc về Editorial Minimalist</p>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="bg-white/90 dark:bg-stone-900/90 backdrop-blur-md font-sans text-[11px] font-medium tracking-wide uppercase fixed bottom-0 w-full z-50 rounded-t-xl border-t border-[#E8E4DC] dark:border-stone-800 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-safe-offset-2 px-4 h-20">
+<a class="flex flex-col items-center justify-center text-[#C75D3F] dark:text-[#D97E63] bg-[#C75D3F]/5 rounded-full px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="explore">explore</span>
+<span>Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="bookmark">bookmark</span>
+<span>Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-[#C75D3F] transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>
